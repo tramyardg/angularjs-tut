@@ -1,7 +1,13 @@
 #### Directive
 Displays values on the page.
 ```
-i.e. ng-app, ng-controller
+i.e. 
+ng-app 
+ng-controller
+ng-repeat: loops through an array and displays each element
+    ng-repeat="product in products"
+ng-src
+    ng-src="{{ product.cover }}"
 ```
 
 #### Expression
