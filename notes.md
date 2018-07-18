@@ -72,6 +72,8 @@ app.directive('appInfo', function() {
     templateUrl: 'js/directives/appMarketApp/appInfo.html'
   };
 });
+// 'E' means it will be used as a new HTML element
+// The = tells the directive to look for an attribute named info in the <app-info>
 ```
 Usage
 ```html
