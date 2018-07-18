@@ -8,6 +8,7 @@ ng-repeat: loops through an array and displays each element
     ng-repeat="product in products"
 ng-src
     ng-src="{{ product.cover }}"
+ng-click
 ```
 
 #### Expression
