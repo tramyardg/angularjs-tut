@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope',
+bookMarketApp.controller('MainController', ['$scope',
   function ($scope) {
     $scope.title = 'Tops Sellers in Books';
     $scope.promo = 'Promotion';

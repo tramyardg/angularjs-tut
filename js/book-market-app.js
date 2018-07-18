@@ -1,0 +1,1 @@
+var bookMarketApp = angular.module('bookMarketApp', []);

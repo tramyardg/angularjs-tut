@@ -48,3 +48,39 @@ Formats the value of an expression.
 {{product.price | currency}}
 {{product.name | uppercase}}
 ```
+
+#### Custom Directive
+```JavaScript
+// controller
+app.controller('MainController', ['$scope', function ($scope) {
+  $scope.move = {
+    icon: 'img/move.jpg',
+    title: 'MOVE',
+    developer: 'MOVE, Inc.',
+    price: 0.99
+  };
+}]);
+// js/directives/appInfo.js
+app.directive('appInfo', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      info: '='
+    },
+    templateUrl: 'js/directives/appMarketApp/appInfo.html'
+  };
+});
+// in html
+// <app-info info="move"></app-info>
+```
+Usage
+```html
+<!-- 'js/directives/appMarketApp/appInfo.html'-->
+<img class="icon" ng-src="{{ info.icon }}">
+<h2 class="title">{{ info.title }}</h2>
+<p class="developer">{{ info.developer }}</p>
+<p class="price">{{ info.price | currency }}</p>
+
+<!-- index.html -->
+<app-info info="move"></app-info>
+```
