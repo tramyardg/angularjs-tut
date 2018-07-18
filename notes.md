@@ -9,6 +9,8 @@ ng-repeat: loops through an array and displays each element
 ng-src
     ng-src="{{ product.cover }}"
 ng-click
+ng-model: binds the values of application data to HTML input controls
+ng-bind: binds the application data to HTML tags
 ```
 
 #### Expression
@@ -70,8 +72,6 @@ app.directive('appInfo', function() {
     templateUrl: 'js/directives/appMarketApp/appInfo.html'
   };
 });
-// in html
-// <app-info info="move"></app-info>
 ```
 Usage
 ```html
