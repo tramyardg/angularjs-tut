@@ -1,13 +1,13 @@
 ### Table of contents
 - [Directives](#directive)
 - [Expression](#expression)
-- [Module](#Module)
-- [Controller](#Controller)
-- [View](#View)
-- [Filter](#Filter)
-- [Custom Directive](#Custom-Directive)
-- [Services](#Services)
-- [Routing](#Routing)
+- [Module](#module)
+- [Controller](#controller)
+- [View](#view)
+- [Filter](#filter)
+- [Custom Directive](#custom-directive)
+- [Service](#service)
+- [Routing](#routing)
 
 ### Directive
 Displays values on the page.
@@ -109,7 +109,7 @@ Usage
 <app-info info="move"></app-info>
 ```
 
-### Services
+### Service
 Way to fetch data from the server.
 ```JavaScript
 // services.factory.js
