@@ -15,7 +15,15 @@ ng-bind: binds the application data to HTML tags
 
 #### Expression
 ```
-{{title}}
+numbers:
+ {{cost *  quantity}}
+array:
+ {{countries[3]}}
+strings:
+ {{employee.firstName + " " + employee.lastName}}
+object:
+ {{title}}
+ {{employee.position}}
 ```
 
 #### Module
@@ -85,4 +93,35 @@ Usage
 
 <!-- index.html -->
 <app-info info="move"></app-info>
+```
+
+#### Services
+Way to fetch data from the server.
+```JavaScript
+// services.factory.js
+app.factory('forecast', ['$http', 
+  function ($http) {
+    return $http.get('https://s3.amazonaws.com/codecademy-content/courses/ltp4/forecast-api/forecast.json').success(function (data) {
+      return data;
+    }).error(function (err) {
+      return err;
+    });
+  }
+]);
+// in controllers.MainController.js
+app.controller('MainController', ['$scope', 'forecast', 
+  function ($scope, forecast) {
+    forecast.success(function (data) {
+      $scope.fiveDay = data; // saved weather data in fiveDay object
+    });
+  }
+]);
+```
+```HTML
+<!-- to view -->
+<div class="forecast" ng-repeat="day in fiveDay.days">
+    <div class="weekday col-xs-4">
+        {{day.datetime | date}}
+    </div>
+</div>
 ```
