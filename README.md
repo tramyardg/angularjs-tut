@@ -1,4 +1,4 @@
-### Table of contents
+## Table of Contents
 - [Directives](#directive)
 - [Expression](#expression)
 - [Module](#module)
