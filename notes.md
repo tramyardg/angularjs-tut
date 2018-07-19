@@ -1,3 +1,4 @@
+### Table of contents
 #### Directive
 Displays values on the page.
 ```
@@ -57,6 +58,9 @@ Formats the value of an expression.
 {{product.pubdate | date}}
 {{product.price | currency}}
 {{product.name | uppercase}}
+orderBy
+filter
+lowercase
 ```
 
 #### Custom Directive
@@ -124,4 +128,21 @@ app.controller('MainController', ['$scope', 'forecast',
         {{day.datetime | date}}
     </div>
 </div>
+```
+
+#### Routing
+Routes are a way to manage apps containing more views.
+```JavaScript
+var app = angular.module('GalleryApp', ['ngRoute']);
+app.config(function ($routeProvider) {
+  $routeProvider.when('/', {
+    controller: 'HomeController',
+    templateUrl: 'views/gallery-app/home.html'
+  }).when('/photos/:id', {
+    controller: 'PhotoController',
+    templateUrl: 'views/gallery-app/photo.html'
+  }).otherwise({
+    redirectTo: '/'
+  });
+});
 ```
