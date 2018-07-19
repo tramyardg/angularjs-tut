@@ -1,6 +1,6 @@
 ### Table of contents
-- [Directives](#Directives)
-- [Expression](#Expression)
+- [Directives](#directive)
+- [Expression](#expression)
 - [Module](#Module)
 - [Controller](#Controller)
 - [View](#View)
@@ -9,7 +9,7 @@
 - [Services](#Services)
 - [Routing](#Routing)
 
-#### Directive
+### Directive
 Displays values on the page.
 ```
 i.e. 
@@ -24,7 +24,7 @@ ng-model: binds the values of application data to HTML input controls
 ng-bind: binds the application data to HTML tags
 ```
 
-#### Expression
+### Expression
 ```
 numbers:
  {{cost *  quantity}}
@@ -37,13 +37,13 @@ object:
  {{employee.position}}
 ```
 
-#### Module
+### Module
 Contains the different components of an AngularJS app.
 ```
 var app = angular.module('myApp', []);
 ```
 
-#### Controller
+### Controller
 Manages the app's data.
 ```
 // app: from module name
@@ -53,14 +53,14 @@ app.controller('HelloController', function($scope) {
 });
 ```
 
-#### View
+### View
 ```
 <div ng-controller="HelloController" >
    <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
 </div>
 ```
 
-#### Filter
+### Filter
 Formats the value of an expression.
 ```
 // The pipe symbol (|) takes the output on the left and "pipes" it to the right.
@@ -73,7 +73,7 @@ filter
 lowercase
 ```
 
-#### Custom Directive
+### Custom Directive
 ```JavaScript
 // controller
 app.controller('MainController', ['$scope', function ($scope) {
@@ -109,7 +109,7 @@ Usage
 <app-info info="move"></app-info>
 ```
 
-#### Services
+### Services
 Way to fetch data from the server.
 ```JavaScript
 // services.factory.js
@@ -140,7 +140,7 @@ app.controller('MainController', ['$scope', 'forecast',
 </div>
 ```
 
-#### Routing
+### Routing
 Routes are a way to manage apps containing more views.
 ```JavaScript
 var app = angular.module('GalleryApp', ['ngRoute']);
